@@ -1,24 +1,29 @@
-import numpy as np
+from turtle import color
 from flask import Flask, request, jsonify, render_template
 import pickle
 
 #create flask app
-app = Flask(__diamond-predictor__)
+app = Flask(__name__)
 
-#load the pickle model
-model = pickle.load(open("model.pkl", "rb"))
+@app.route("/", methods=['GET', 'POST'])
+@app.route("/index")
+def home():
+    if request.method == "POST":
+        model = pickle.load(open('model.pkl', 'rb'))
+        carat = request.form['']
+        cut = request.form['']
+        color = request.form['']
+        clarity = request.form['']
+        carat = request.form['']
+        carat = request.form['']
 
-@app.route("/")
-def Home():
-    return render_template("index.html")
 
-@app.route("/predict", methods = ["POST"])
-def predict():
-    float_features = [float(x) for x in request.form.values()]
-    features = [np.array(float_features)]
-    prediction = model.predict(features)
 
-    return render_template("index.html", prediction_text = "The price of the diamond is {}".format(prediction))
 
-if __diamond-predictor__ = "__main__":
+        prediction = model.predict([[user_input]])
+        print(prediction)
+    return render_template("index.html", prediction=prediction)
+
+
+if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diamond Price Predicition</title>
+    </head>
+
+    <body>
+        
+        <center>
+            <form method="POST">
+            <label for="carat">Carat of Diamond</label>
+            <input type="number" name="carat" min="0.2" max="6.0">
+
+            <br><br>
+            <label for="cut">Cut of Diamond</label>
+            <input list="cut" name="cut">
+            <datalist id="cut">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="0">0</option>
+            </datalist>
+            <br><br>
+
+            <label for="color">Color of Diamond</label>
+            <input list="color" name="color">
+            <datalist id="color">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </datalist>
+            <br><br>
+
+            <label for="clarity">Clarity of Diamond</label>
+            <input list="clarity" name="clarity">
+            <datalist id="clarity">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </datalist>
+            <br><br>
+
+            <label for="depth">Total Depth Percentage of Diamond</label>
+            <input type="number" name="depth">
+
+            <br><br>
+            <label for="table">Width of Diamond top</label>
+            <input type="table" name="table" min="40" max="100">
+
+            <br><br>
+            <label for="x">length of Diamond in mm</label>
+            <input type="x" name="x" min="0" max="12.0">
+
+            <br><br>
+            <label for="y">Width of Diamond in mm</label>
+            <input type="y" name="y" min="0" max="60.0">
+
+            <br><br>
+            <label for="z">Depth of Diamond in mm</label>
+            <input type="z" name="z" min="0" max="33.0">
+
+            <br><br>
+            <input type="reset">
+            <input type="submit">
+
+
+            </form>
+         </center>
+    </body>
+</html>
